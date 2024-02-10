@@ -10,6 +10,7 @@ _LOCALE.en = {
     menu_workstation_item_remove = "Remove Item",
     menu_workstation_process_start = "Start Workstation",
     menu_workstation_process_stop = "Stop Workstation",
+    menu_workstation_eta = "ETA: %s minutes",
 
     -- DIALOG
     dialog_item_add_title = "Available Capacity: %s/%s",

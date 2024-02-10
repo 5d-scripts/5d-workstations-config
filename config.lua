@@ -2,6 +2,7 @@ _CONFIG =
 {
     syncSeconnds = 60, -- Recommended between 30 and 60 seconds.
     locale = "en",
+    debug = false,
     menu_align = "top-left", -- ESX Menu align (top-left, top-right, left, right)
     Workstations = 
     {
@@ -66,8 +67,9 @@ _CONFIG =
             },
             itemOut = 
             {
-                name = "fabric",
-                label = "Fabric",
+                name = "WEAPON_PISTOL",
+                label = "Pistole",
+				ammo = 0, -- Select how much ammo should be given to the player. Default is 0.
                 count = 2
             },
             transformTimeSeconds = 10,
@@ -117,23 +119,18 @@ if (not IsDuplicityVersion()) then
     ---@param message string Message to be displayed for the help notify. Is called every frame. Can be modified to be displayed only once (see comments).
     local isOpen = false
     RegisterNetEvent("5d-workstations:helpNotify:show", function(message)
-        ESX.ShowHelpNotification(message, true)
-
-        --[[         
+       -- ESX.ShowHelpNotification(message, true)
         if(not isOpen) then
             isOpen = true
-            -- Show UI
+            exports["5d-helpnotify"]:showHelpNotification(message)
         end 
-]]
     end)
 
     RegisterNetEvent("5d-workstations:helpNotify:hide", function()
-        --[[         
         if(isOpen) then
             isOpen = false
-            --Hide UI
+			exports["5d-helpnotify"]:closeHelpNotification()
         end 
-]]
     end)
 end
 

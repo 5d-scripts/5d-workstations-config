@@ -10,6 +10,7 @@ _LOCALE.de = {
     menu_workstation_item_remove = "Item rausnehmen",
     menu_workstation_process_start = "Prozess starten",
     menu_workstation_process_stop = "Prozess stoppen",
+    menu_workstation_eta = "ETA: %s Minuten",
 
     -- DIALOG
     dialog_item_add_title = "Verfügbare Kapazität: %s/%s",
